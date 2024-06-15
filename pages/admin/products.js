@@ -48,10 +48,7 @@ function reducer(state, action) {
 }
 
 export default function Products() {
-  const [
-    { loading, error, products, loadingCreate, loadingDelete, successDelete },
-    dispatch,
-  ] = useReducer(reducer, {
+  const [ { loading, error, products, loadingCreate, loadingDelete, successDelete },dispatch,] = useReducer(reducer, {
     loading: true,
     products: [],
     error: "",

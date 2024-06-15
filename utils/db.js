@@ -13,6 +13,7 @@ async function connect() {
     }
     await mongoose.disconnect();
   }
+  console.log(process.env.MONGODO_URL)
   const db = await mongoose.connect(process.env.MONGODO_URL);
   connection.isConnected = db.connections[0].readyState;
 }
